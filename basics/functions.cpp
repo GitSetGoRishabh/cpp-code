@@ -27,5 +27,12 @@ int main(){
     string name;
     cin>>name;
     greeting(name);
+
+
+    // pass by value - a copy is made for the original and the program is executed on it.
+    // pass by reference - everything is done the original memory location 
+    // for this just add & with the variable name while passing the parameter.
+    //arrays are always passed by reference even without expilicitly writing &.
+    
     return 0;
 }
