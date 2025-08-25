@@ -27,7 +27,11 @@ void explainVector(){
     v2.push_back({1,2});  // you have to write the {} for passing the values in push back 
     v2.emplace_back(3,4);  // you can pass values without useing the {}
 
-    vector<int> v(5,100)  // this creates a vector of size 5 with 100 as all elements .
+    vector<int> v3(5,100);  // this creates a vector of size 5 with 100 as all elements .
+    vector<int> v4(5);      //vector of size 5 (but it can also be increased ... try using push_back)
+    vector<int> v5(v3);     //creates a copy of of v3 as v5
+    //accessing elements in vector is similar to array , just like indexing from 0 ;
+
 
 }
 
