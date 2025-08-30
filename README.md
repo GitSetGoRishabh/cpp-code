@@ -11,10 +11,6 @@ This repo will track my journey as I learn and practice **C++ programming** from
 - ✅ C++ Basics (Input/Output, Variables, Data Types)
 - ✅ Operators & Control Flow (if, loops, switch)
 - ✅ Functions (pass by value/reference, recursion)
-- ✅ Arrays, Strings & Pointers
-- ✅ Object-Oriented Programming (OOP)
-  - Classes & Objects
-  - Inheritance, Polymorphism, Encapsulation
 - ✅ STL (Vectors, Maps, Sets, Pairs, Algorithms)
 - 🛠️ Practice Problems & Mini Projects
 
