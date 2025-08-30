@@ -43,8 +43,8 @@ void explainVector(){
     cout<<*(it)<<" ";
 
     vector<int>::iterator it=v3.end();  // points not the memory location of the last element but right after the last element .
-    vector<int>::iterator it=v3.rend(); // points to the memeory location just before the first element (exact opposite of end).
-    vector<int>::iterator it=v3.rbegin(); //points to the last memory location (exact opposite of begin).
+    // vector<int>::iterator it=v3.rend(); // points to the memeory location just before the first element (exact opposite of end).
+    // vector<int>::iterator it=v3.rbegin(); //points to the last memory location (exact opposite of begin).
 
     // these reverse end and reverse begin works in opposite way with it++ and it-- as well i.e in it++ instead of moving to the right it will move to the left.
 
@@ -60,8 +60,31 @@ void explainVector(){
     }
 
     for(auto it : v){
-        cout<<*(it);
+        cout<<it;
     }
+
+    //To erase element
+    v.erase(v.begin()+1);  // for single element 
+    v.erase(v.begin()+1,v.begin()+3);   // last address won't be included and won't be erased , till begin()+2 will be erased.
+
+    //to insert element
+    vector<int>v(2,100);
+    v.insert(v.begin(),300);
+    v.insert(v.begin()+1,2,10);
+
+    vector<int> copy(2,50);
+    v.insert(v.begin(),copy.begin(),copy.end());
+
+    cout<<v.size();
+    v.pop_back();
+
+    v.swap(v);
+
+    v.clear();
+
+    cout<<v.empty();
+
+
 
 }
 
