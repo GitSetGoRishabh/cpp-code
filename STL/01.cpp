@@ -25,13 +25,43 @@ void explainVector(){
 
     vector<pair<int,int>> v2;
     v2.push_back({1,2});  // you have to write the {} for passing the values in push back 
-    v2.emplace_back(3,4);  // you can pass values without useing the {}
+    v2.emplace_back(3,4);  // you can pass values without using the {}
 
     vector<int> v3(5,100);  // this creates a vector of size 5 with 100 as all elements .
-    vector<int> v4(5);      //vector of size 5 (but it can also be increased ... try using push_back)
+    vector<int> v4(5);      //vector of size 5 , it can give 0's or any garbage values (but it can also be increased ... try using push_back)
     vector<int> v5(v3);     //creates a copy of of v3 as v5
     //accessing elements in vector is similar to array , just like indexing from 0 ;
+    cout<<v[0] << v.at(0);   //both are same 
 
+    // ITERATORS
+
+    vector<int>::iterator it=v3.begin();   //points to the first (base) memory address of the vector 
+    it++;
+    cout<<*(it)<<" ";
+    
+    it=it+2;
+    cout<<*(it)<<" ";
+
+    vector<int>::iterator it=v3.end();  // points not the memory location of the last element but right after the last element .
+    vector<int>::iterator it=v3.rend(); // points to the memeory location just before the first element (exact opposite of end).
+    vector<int>::iterator it=v3.rbegin(); //points to the last memory location (exact opposite of begin).
+
+    // these reverse end and reverse begin works in opposite way with it++ and it-- as well i.e in it++ instead of moving to the right it will move to the left.
+
+    cout<<v.back()<<" ";  // last 
+    // to print the vector you can use the for loop for the index 0-n;
+    //              OR
+    for(vector<int>::iterator it=v.begin();it !=v.end();it++){
+        cout<<*(it);
+    }
+
+    for(auto  it=v.begin();it!=v.end();it++){
+        cout<<*(it);
+    }
+
+    for(auto it : v){
+        cout<<*(it);
+    }
 
 }
 
